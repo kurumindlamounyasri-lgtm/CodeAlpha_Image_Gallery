@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery with filters, navigation, and a lightbox.">
+  <title>Image Gallery | Visual Stories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Visual Stories home"><span class="brand-icon">✳</span> visual<span>stories</span></a>
+    <p class="header-note">A little collection of beautiful things</p>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">THE CURATED COLLECTION</p>
+      <h1>Find beauty in<br><span>the little things.</span></h1>
+      <p class="hero-copy">A collection of moments, places, and details worth pausing for.</p>
+    </section>
+
+    <section class="gallery-section" aria-label="Image gallery">
+      <div class="gallery-toolbar">
+        <div>
+          <p class="eyebrow">BROWSE THE GALLERY</p>
+          <h2>Visual diary</h2>
+        </div>
+        <span id="photoCount" class="photo-count">12 photos</span>
+      </div>
+
+      <nav id="filters" class="filters" aria-label="Filter images by category">
+        <button class="filter-btn active" data-filter="all" type="button">All photos</button>
+        <button class="filter-btn" data-filter="nature" type="button">Nature</button>
+        <button class="filter-btn" data-filter="architecture" type="button">Architecture</button>
+        <button class="filter-btn" data-filter="travel" type="button">Travel</button>
+        <button class="filter-btn" data-filter="details" type="button">Little details</button>
+      </nav>
+
+      <div id="gallery" class="gallery-grid"></div>
+      <p class="gallery-tip">Tip: select any image to open it in the lightbox.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>VISUAL STORIES</span>
+    <span>Made with curiosity <b>✳</b></span>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button id="closeLightbox" class="icon-btn close-btn" type="button" aria-label="Close image viewer">×</button>
+    <button id="prevImage" class="icon-btn nav-btn prev-btn" type="button" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption>
+        <div><p id="lightboxCategory" class="eyebrow"></p><h3 id="lightboxTitle"></h3></div>
+        <span id="lightboxCount"></span>
+      </figcaption>
+    </figure>
+    <button id="nextImage" class="icon-btn nav-btn next-btn" type="button" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
